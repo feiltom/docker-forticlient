@@ -11,7 +11,6 @@ RUN echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/ap
 RUN cd /opt && wget 'http://www.canada-today.ca/forticlient.tar.gz' -O forticlient-sslvpn.tgz \
     && tar -xzf forticlient-sslvpn.tgz \
     && rm -rf forticlient-sslvpn.tgz \
-    && mkdir /lib64 \
     && ln -s /lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2 \
     && echo $'debug dump\n\
 lock\n\
